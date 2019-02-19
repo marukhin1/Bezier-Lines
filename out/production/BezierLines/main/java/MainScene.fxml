@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="685.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.MainScene">
+   <children>
+      <SplitPane dividerPositions="0.23162583518930957" prefHeight="685.0" prefWidth="900.0">
+         <items>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="14.0" prefHeight="92.0" prefWidth="172.0" text="Программа построения линии Безье и изменения её порядка без изменения формы." wrapText="true">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="116.0" prefHeight="20.0" prefWidth="150.0" text="Порядок:">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <ChoiceBox fx:id="orderChoiceBox" layoutX="11.0" layoutY="140.0" prefWidth="150.0" />
+                  <Label fx:id="startPointLabel" alignment="TOP_LEFT" layoutX="14.0" layoutY="180.0" onMouseClicked="#startPointLabelClicked" prefHeight="42.0" prefWidth="150.0" text="Начальная точка" wrapText="true">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="endPointLabel" alignment="TOP_LEFT" layoutX="14.0" layoutY="221.0" onMouseClicked="#endPointLabelClicked" prefHeight="42.0" prefWidth="150.0" text="Конечная точка" wrapText="true">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="tempPoint1Label" alignment="TOP_LEFT" layoutX="15.0" layoutY="260.0" onMouseClicked="#tempPoint1Clicked" prefHeight="60.0" prefWidth="159.0" text="Первая промежуточная точка" wrapText="true">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="tempPoint2Label" alignment="TOP_LEFT" layoutX="15.0" layoutY="320.0" onMouseClicked="#tempPoint2Clicked" prefHeight="60.0" prefWidth="159.0" text="Вторая промежуточная точка" wrapText="true">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="tempPoint3Label" alignment="TOP_LEFT" layoutX="15.0" layoutY="380.0" onMouseClicked="#tempPoint3Clicked" prefHeight="60.0" prefWidth="159.0" text="Третья промежуточная точка" wrapText="true">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="tempPoint4Label" alignment="TOP_LEFT" layoutX="15.0" layoutY="440.0" onMouseClicked="#tempPoint4Clicked" prefHeight="60.0" prefWidth="159.0" text="Четвертая промежуточная точка" wrapText="true">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="amountPoints" alignment="TOP_LEFT" layoutX="14.0" layoutY="500.0" prefHeight="42.0" prefWidth="166.0" text="Выберите степень" wrapText="true">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="539.0" prefHeight="20.0" prefWidth="117.0" text="Скорость:">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Slider fx:id="speedSlider" layoutX="15.0" layoutY="559.0" majorTickUnit="1.0" max="10.0" min="1.0" minorTickCount="9" prefHeight="38.0" prefWidth="159.0" showTickLabels="true" showTickMarks="true" value="7.0" />
+                  <Button fx:id="stopButton" layoutX="17.0" layoutY="606.0" mnemonicParsing="false" onAction="#stopButtonAction" text="Остановить" />
+                  <Button fx:id="resetButton" layoutX="111.0" layoutY="606.0" mnemonicParsing="false" onAction="#resetButtonAction" prefHeight="25.0" prefWidth="80.0" text="Сброс" />
+                  <Button fx:id="buildButton" layoutX="65.0" layoutY="641.0" mnemonicParsing="false" onAction="#buildButtonAction" text="Построить" />
+                  <Button fx:id="upOrderButton" layoutX="162.0" layoutY="641.0" mnemonicParsing="false" onAction="#upOrderButtonAction" text="+" />
+                  <Button fx:id="downOrderButtonAction" layoutX="15.0" layoutY="641.0" mnemonicParsing="false" onAction="#downOrderButtonAction" prefHeight="25.0" prefWidth="25.0" text="-" />
+               </children>
+            </AnchorPane>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="844.0">
+               <children>
+                  <SplitPane layoutX="19.0" layoutY="24.0" prefHeight="625.0" prefWidth="650.0">
+                     <items>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <Canvas fx:id="canvas" height="625.0" width="650.0" />
+                           </children>
+                        </AnchorPane>
+                     </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+   </children>
+</Pane>
