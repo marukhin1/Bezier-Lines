@@ -14,4 +14,4 @@
 Кнопки "+" и "-" увеличивают и уменьшают порядок кривой (если это возможно).
 ![image](https://user-images.githubusercontent.com/32647200/53037263-cc589780-348a-11e9-8b9c-7a6917bbd0ad.png)
 ### Результат работы программы: ###
-![image](https://user-images.githubusercontent.com/32647200/53037391-26f1f380-348b-11e9-8d46-e16d73f2a258.png)
+![bezierlinesexample](https://user-images.githubusercontent.com/32647200/53840083-394f4f80-3faa-11e9-9ed7-3e033ffb5e2e.gif)
